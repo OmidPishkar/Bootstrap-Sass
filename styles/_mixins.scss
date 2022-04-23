@@ -1,0 +1,85 @@
+@mixin buttonStyle($padding , $margin, $color , $bgColor , $border , $bRadius) {
+    padding: $padding;
+    margin: $margin;
+    color: $color;
+    background-color: $bgColor;
+    border: $border;
+    border-radius: $bRadius;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin buttonHover($color , $bgColor) {
+    &:hover{
+        color: $color;
+        background-color: $bgColor;
+    }
+}
+
+@mixin textStyles($size, $color, $weight, $height) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+
+@mixin maxMedia($width) {
+    @if ($width==XX) {
+        @media (max-width: 1400.98px) {
+            @content;
+        }
+    }
+    @else if ($width==X) {
+        @media (max-width: 1200.98px) {
+            @content;
+        }
+    }
+    @else if ($width==L) {
+        @media (max-width: 992.98px) {
+            @content;
+        }
+    }
+    @else if ($width==M) {
+        @media (max-width: 768.98px) {
+            @content;
+        }
+    }
+    @else if ($width==S) {
+        @media (max-width: 576.98px) {
+            @content;
+        }
+    }
+}
+
+
+
+
+
+@mixin minMedia($width) {
+    @if ($width==XX) {
+        @media (min-width: 1400.98px) {
+            @content;
+        }
+    }
+    @else if ($width==X) {
+        @media (min-width: 1200.98px) {
+            @content;
+        }
+    }
+    @else if ($width==L) {
+        @media (min-width: 992.98px) {
+            @content;
+        }
+    }
+    @else if ($width==M) {
+        @media (min-width: 768.98px) {
+            @content;
+        }
+    }
+    @else if ($width==S) {
+        @media (min-width: 576.98px) {
+            @content;
+        }
+    }
+}
